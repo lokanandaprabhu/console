@@ -246,3 +246,32 @@ Feature: Create Application from git form
               And user is able to see Redirect value is selected in "Insecure traffic"
 
 
+        @regression @odc-7128
+        Scenario: Create PAC Repository from Import From Git Form on Add page: A-06-TC18
+            Given user has installed OpenShift Pipelines Operator
+              And user has selected namespace "aut-addflow-git"
+              And user clicks on the Import from Git card on the Add page
+             When user enters Git Repo URL as "https://github.com/Lucifergene/oc-pipe"
+              And user enters workload name as "openshift-pac-repo"
+              And user enters secret as "github-secret"
+              And user clicks the Generate Webhook Secret to generate Webhook secret
+              And user clicks Create button on Add page
+             Then user will be redirected to "openshift-pac-repo" Repository Details page
+              And user selects option "Delete Repository" from Actions menu drop down
+              And user clicks Delete button on Delete Repository modal
+              And user will be redirected to Repositories page to verify that "openshift-pac-repo" repository is not present
+
+        
+        @regression @ocp-43404
+        Scenario: Disable devfile import strategy for git type - other: A-06-TC18
+            Given user is at Import from Git form
+             When user enters Git Repo URL as "https://mysupersecretgit.example.com/org/repo"
+             Then devfile import strategy is disabled
+
+        @regression @ocp-43404
+        Scenario: When devfile path is not detected: A-06-TC19
+            Given user is at Import from Git form
+             When user enters Git Repo URL as "https://github.com/nodeshift-starters/devfile-sample"
+              And user clicks on Edit import strategy
+              And user enters Devfile Path as "devfile1"
+             Then user see message "Devfile not detected"
