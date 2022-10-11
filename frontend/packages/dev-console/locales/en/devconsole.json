@@ -1,5 +1,7 @@
 {
   "Developer": "Developer",
+  "Developer Catalog Types": "Developer Catalog Types",
+  "Enable or Disable Catalog types": "Enable or Disable Catalog types",
   "Developer Catalog": "Developer Catalog",
   "Git Repository": "Git Repository",
   "Container images": "Container images",
@@ -161,6 +163,8 @@
   "Select a Project to view the list of builds or <2>create a Project</2>.": "Select a Project to view the list of builds or <2>create a Project</2>.",
   "Add shared applications, services, event sources, or source-to-image builders to your Project from the developer catalog. Cluster administrators can customize the content made available in the catalog.": "Add shared applications, services, event sources, or source-to-image builders to your Project from the developer catalog. Cluster administrators can customize the content made available in the catalog.",
   "Select a Project to view the developer catalog or <2>create a Project</2>.": "Select a Project to view the developer catalog or <2>create a Project</2>.",
+  "Enabled Catalog types": "Enabled Catalog types",
+  "Disabled Catalog types": "Disabled Catalog types",
   "Bindable": "Bindable",
   "Create": "Create",
   "Sample repository": "Sample repository",
