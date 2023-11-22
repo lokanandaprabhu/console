@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { TableData, RowFunctionArgs } from '@console/internal/components/factory';
-import { ResourceLink, Timestamp, ResourceKebab } from '@console/internal/components/utils';
+import { ResourceLink, Timestamp } from '@console/internal/components/utils';
 import { referenceForModel } from '@console/internal/module/k8s';
 import { TaskRunModel, PipelineModel } from '../../../models';
 import { TaskRunKind } from '../../../types';
@@ -8,6 +8,7 @@ import { getTaskRunKebabActions } from '../../../utils/pipeline-actions';
 import { getModelReferenceFromTaskKind } from '../../../utils/pipeline-augment';
 import { taskRunFilterReducer } from '../../../utils/pipeline-filter-reducer';
 import { pipelineRunDuration } from '../../../utils/pipeline-utils';
+import { ResourceKebab } from '../../pipelineruns/triggered-by/ResourceKebab';
 import { TektonResourceLabel } from '../../pipelines/const';
 import TaskRunStatus from '../status/TaskRunStatus';
 import { tableColumnClasses } from './taskruns-table';
