@@ -105,6 +105,7 @@
   "Task status": "Task status",
   "Started": "Started",
   "Signed": "Signed",
+  "Archived in Tekton results": "Archived in Tekton results",
   "Unknown failure condition": "Unknown failure condition",
   "Failure on task {{taskName}} - check logs for details.": "Failure on task {{taskName}} - check logs for details.",
   "Error downloading logs.": "Error downloading logs.",
